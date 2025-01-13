@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/database');
@@ -9,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // or your frontend URL
+  origin: 'https://movies-dashboard-frontend-xbni.vercel.app/login', 
   credentials: true
 }));
 app.use(express.json());
