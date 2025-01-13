@@ -8,7 +8,10 @@ const movieRoutes = require('./routes/movieRoutes');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', // or your frontend URL
+  credentials: true
+}));
 app.use(express.json());
 
 // Connect to Database
