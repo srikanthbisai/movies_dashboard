@@ -1,4 +1,3 @@
-// controllers/movieController.js
 const Movie = require('../models/Movie');
 const mongoose = require('mongoose');
 
