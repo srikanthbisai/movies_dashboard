@@ -6,17 +6,14 @@ const movieRoutes = require('./routes/movieRoutes');
 
 const app = express();
 
-// Middleware
 app.use(cors({
   origin: 'https://movies-dashboard-frontend-xbni.vercel.app', 
   credentials: true
 }));
 app.use(express.json());
 
-// Connect to Database
 connectDB();
 
-// Routes
 app.use('/api', authRoutes);
 app.use('/api/movies', movieRoutes);
 
